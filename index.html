@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgoVisualizer</title>
+
+  <link rel="stylesheet" href="./CSS/home.css">
+  <link rel="stylesheet" href="./CSS/navbar.css">
+  <link rel="stylesheet" href="./CSS/footer.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Mulish:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar" id="nav-placeholder">
+    <a href="#" class="navbar-brand">Algorithm visualizer</a>
+    <!--     <a href="#" class="navbar-brand"><img src="https://www.dropbox.com/s/zzwcz0xpj95sy7p/logo%20%2810%29.png?raw=1" style="width: 50px; vertical-align: middle;"></a> -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="./HTML/AlgorithmsAI.html">AI</a></li>
+      <li><a href="./HTML/AlgorithmsDS.html">DSA</a></li>
+      <li><a href="./HTML/About.html">About</a></li>
+    </ul>
+    <button class="navbar-toggler">
+      <span></span>
+    </button>
+  </nav>
+
+  <section class="intro">
+    <canvas id="bouncyBall"></canvas>
+    <div class="intro-1">Come visualize complex algorithms with</div>
+    <div class="intro-2">ALGORITHM VISUALIZER</div>
+
+    <!-- button problem -->
+
+    <a href="#">
+      <div class="intro-btn">
+        <button class="vis-btn" type="button">LET'S VISUALIZE!</button>
+      </div>
+    </a>
+
+    
+  </section>
+
+  <section class="algo-tile">
+    <canvas id="bouncyBall"></canvas>
+  </section>
+
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <h3>Algorithm<span>Visualizer</span></h3>
+
+      <p class="footer-links">
+        <a href="#" class="link-1">Home</a>
+        <a href="#">AI</a>
+        <a href="#">DSA</a>
+        <a href="#">About</a>
+      </p>
+
+      <p class="footer-company-name">Copyright © <span>Algorithm Visualizer</span></p>
+    </div>
+
+    <div class="footer-center">
+      <div class="addons">Request New Algorithm</div>
+      <div class="login-page">
+        <div class="form">
+          <form class="login-form">
+            <input type="text" placeholder="topic" />
+            <input type="text" placeholder="algorithm" />
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About the company</span>
+        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+        vehicula sit amet.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="#"><i class="fa fa-google"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <script src="./JS/nav.js"></script>
+  <script src="./JS/constellation.js"></script>
+</body>
+
+</html>

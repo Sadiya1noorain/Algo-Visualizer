@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: linear-gradient(180deg, #360060 0%, rgba(59, 0, 106, 0.66) 127.92%);
+    color: #333;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    /* margin: 0 auto; */
+    max-width: 100vw;
+    overflow-y: scroll;
+    /* padding: 7em 3em 2em 3em; */
+  }
+  
+  ol, ul {
+      list-style: none;
+  }
+  
+  .expanding-grid {
+    position: relative;
+    width: 100%;
+  }
+  .expanding-grid .links {
+    display: block;
+    overflow: hidden;
+    padding: 7em 3em 2em 3em;
+  }
+  .expanding-grid .links > li {
+    box-sizing: border-box;
+    float: left;
+    padding: 1em;
+  }
+  .expanding-grid .links > li a {
+    background: #fff;
+    color: #a571fa;
+    box-shadow: 0 0 7px 7px rgb(255 255 255 / 20%);
+    border-radius: 3px;
+    display: block;
+    font-size: 2em;
+    line-height: 1;
+    padding: 25% 1em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .expanding-grid .links > li a:hover {
+    background: #a571fa;
+    color: #fff;
+  }
+  .expanding-grid .links > li a.active {
+    background: #a571fa;
+    color: #fff;
+  }
+  .expanding-grid .links > li a.active:after {
+    background-color: transparent;
+    border-bottom: 0.375em solid #888;
+    border-left: 0.375em solid transparent;
+    border-right: 0.375em solid transparent;
+    bottom: -0.5em;
+    content: '';
+    height: 0;
+    left: 50%;
+    margin-left: -0.375em;
+    position: absolute;
+    width: 0;
+  }
+  /* change here for less or many elem for row */
+  @media only screen and (max-width: 29.99em) {
+    .expanding-grid .links > li {
+      width: 100%;
+    }
+    .expanding-grid .links > li:nth-of-type(n+1) {
+      clear: left;
+    }
+  }
+  @media only screen and (min-width: 30em) and (max-width: 37.99em) {
+    .expanding-grid .links > li {
+      width: 50%;
+    }
+    .expanding-grid .links > li:nth-of-type(2n+1) {
+      clear: left;
+    }
+  }
+  @media only screen and (min-width: 38em) and (max-width: 48.89em) {
+    .expanding-grid .links > li {
+      width: 33.3%;
+    }
+    .expanding-grid .links > li:nth-of-type(3n+1) {
+      clear: left;
+    }
+  }
+  @media only screen and (min-width: 48.9em) {
+    .expanding-grid .links > li {
+      width: 25%; /* links width */
+    }
+    .expanding-grid .links > li:nth-of-type(4n+1) {/* change ?n to change how many elem for row */
+      clear: left;
+    }
+  }
+  .expanding-grid .spacer {
+    background-color: #888;
+    clear: both;
+    display: block;
+    margin: 0 1em;
+  }
+  .expanding-grid .expanding-container {
+    clear: both;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+  }
+  .expanding-grid .expanding-container.expanded, .expanding-grid .expanding-container:target {
+    display: block;
+  }
+  .expanding-grid .hentry {
+    background: #888;
+    box-sizing: border-box;
+    clear: both;
+    color: #fff;
+    min-height: 4em;
+    overflow: hidden;
+    padding: 2em;
+    width: 80%;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .expanding-grid .hentry .entry-image {
+    box-sizing: border-box;
+    float: right;
+    margin-left: 1em;
+    padding: 0.25em 0 0.52em 1em;
+    text-align: center;
+    width: 40%;
+  }
+  .expanding-grid .hentry .entry-title {
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+  .expanding-grid .close-button {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNLjcuN2wxOCAxOG0tMTggMGwxOC0xOCIvPjwvc3ZnPg==) no-repeat scroll 50% 50% transparent;
+    color: #fff;
+    display: inline-block;
+    height: 20px;
+    line-height: 1;
+    overflow: hidden;
+    padding: 1.5em 2em;
+    text-decoration: none;
+    text-indent: 5em;
+    white-space: nowrap;
+    width: 20px;
+    will-change: opacity;
+    z-index: 5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .expanding-grid .close-button.active {
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+  .expanding-grid .close-button:hover {
+    opacity: 0.5;
+  }
+  
+  .img-placeholder {
+    background: #c69aff;
+    color: #fff;
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1;
+    padding: 25% 0.25em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
